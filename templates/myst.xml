@@ -14,7 +14,7 @@ Cross-platform software to run a node in Mysterium Network. It contains Mysteriu
   <WebUI>http://[IP]:[PORT:4449]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/locus313/unraid-docker-templates/main/templates/myst.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/locus313/unraid-docker-templates/main/templates/img/myst.png</Icon>
-  <ExtraParams>--cap-add NET_ADMIN</ExtraParams>
+  <ExtraParams>--device=/dev/net/tun --cap-add NET_ADMIN</ExtraParams>
   <PostArgs>service --agreed-terms-and-conditions</PostArgs>
   <Config Name="WebUI Port" Target="4449" Default="4449" Mode="tcp" Description="Container Port: 4449" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Myst Config" Target="/var/lib/mysterium-node" Default="" Mode="rw" Description="Container Path: /var/lib/mysterium-node" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/myst/</Config>
